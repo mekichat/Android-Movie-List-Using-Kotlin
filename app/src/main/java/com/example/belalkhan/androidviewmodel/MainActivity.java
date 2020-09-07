@@ -19,16 +19,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = findViewById(R.id.recyclerview);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.fragment_container, new MovieListFragment()).commit();
 
-        MovieViewModel model = ViewModelProviders.of(this).get(MovieViewModel.class);
 
-        model.getMovies().observe(this,  (movieResults) -> {
-            adapter = new MovieAdapter(MainActivity.this, movieResults);
-            recyclerView.setAdapter(adapter);
-
-        });
     }
 }
