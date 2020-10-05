@@ -1,4 +1,4 @@
-package com.example.belalkhan.androidviewmodel;
+package com.example.androidviewmodel;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

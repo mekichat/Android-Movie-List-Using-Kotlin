@@ -1,4 +1,4 @@
-package com.example.belalkhan.androidviewmodel;
+package com.example.androidviewmodel;
 
 import org.junit.Test;
 
